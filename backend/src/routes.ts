@@ -3,7 +3,8 @@ import OrphanagesCOntroller from './controllers/OrphanagesCOntroller';
 
 const routes = Router();
 
-
-routes.post('/orphanages', OrphanagesCOntroller.create)
+routes.get('/orphanages', OrphanagesCOntroller.index);
+routes.get('/orphanages/:id', OrphanagesCOntroller.show);
+routes.post('/orphanages', OrphanagesCOntroller.create);
 
 export default routes;
